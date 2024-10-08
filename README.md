@@ -20,9 +20,9 @@
 <hr />
 
 ## News
-**(September 2023)** Training codes of CasPL+PromptSRC will be released.
+**(September 2024)** Training codes of CasPL+PromptSRC will be released.
 
-**(July 2023)** Our work is accepted to ECCV 2024!  
+**(July 2024)** Our work is accepted to ECCV 2024!  
 
   
 <hr />
