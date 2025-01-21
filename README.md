@@ -13,7 +13,7 @@
 *Joint first authors
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2409.17805)
-[![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)]()
+
 
 
 
@@ -80,23 +80,38 @@ Please follow the instructions at [DATASETS.md](docs/DATASETS.md) to prepare all
 
 
 ### Training
+#### (0) Get boosting prompt.
+```
+python train_script/train_get_boosting_prompt.py
+```
+Add data path and save path for get the weight of boosting_prompt.
+```
+dataset_list = [['fgvc_aircraft', "data_path/fgvc-aircraft-2013b/"]]
+SAVE_PATH="save_path/caspl_teacher"
+```
+Or you can download the weight related to the boosting prompt on this [link](https://pan.baidu.com/share/init?surl=OkWiRnnTmXg6mJrECjuVzQ&pwd=5tbr), and save it in save_path.
+
+
 #### (1) Base-to-Novel Experiments.
+Add data_path and save_path. The weight of base-to-novel can be found in this [link](https://pan.baidu.com/s/1OkWiRnnTmXg6mJrECjuVzQ?pwd=5tbr).
+```
+dataset_list = [['fgvc_aircraft', "data_path/fgvc-aircraft-2013b/"]]
+SAVE_PATH="save_path/caspl_promptsrc_base_to_novel"
+SAVE_PATH_TEACHER="save_path/caspl_teacher"
+```
+Run the training script below. 
 ```
 python train_script/caspl_promptsrc/train_base_to_new.py
 ```
-train_base_to_new.py contains two-stage training, and the other experimental files also contain two-stage training:
-
-```
-bash scripts/ivlp/base2new_train_ivlp_teacher.sh #the first stage to get the boosting prompt
-bash scripts/caspl/promptsrc/base2new_train_promptsrc_student.sh #the second stage to train the adapting prompt
-```
 
 #### (2) Few-shots Experiments.
+Add data path, save path, and use the script trained below. The weight of few-shots can be find in this [link](https://pan.baidu.com/s/1OkWiRnnTmXg6mJrECjuVzQ?pwd=5tbr).
 ```
 python train_script/caspl_promptsrc/train_few_shot.py
 ```
 
 #### (3) Cross-dataset Experiments.
+Add data path, save path, and use the script trained below. The weight of cross-dataset can be find in this [link](https://pan.baidu.com/s/1OkWiRnnTmXg6mJrECjuVzQ?pwd=5tbr).
 ```
 python train_script/caspl_promptsrc/train_cross_dataset.py
 ```
@@ -107,7 +122,16 @@ python train_script/caspl_promptsrc/train_cross_dataset.py
 
 ## Citation
 If you find our work, this repository, or pretrained models useful, please consider giving a star and citation.
-
+```
+@inproceedings{wu2025cascade,
+  title={Cascade prompt learning for vision-language model adaptation},
+  author={Wu, Ge and Zhang, Xin and Li, Zheng and Chen, Zhaowei and Liang, Jiajun and Yang, Jian and Li, Xiang},
+  booktitle={European Conference on Computer Vision},
+  pages={304--321},
+  year={2025},
+  organization={Springer}
+}
+```
 
 ## Contact
 If you have any questions, please create an issue on this repository or contact at gewu.nku@gmail.com.
