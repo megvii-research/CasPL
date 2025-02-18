@@ -13,6 +13,7 @@
 *Joint first authors
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2409.17805)
+[![paper](https://img.shields.io/badge/chinese-version-red)](https://www.overleaf.com/read/rmjrknhqfqkw#c887ea)
 
 
 
