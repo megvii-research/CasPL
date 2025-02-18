@@ -20,6 +20,8 @@
 <hr />
 
 ## News
+**(March 2025)** The Chinese version of the paper has been released in this [link](https://www.overleaf.com/project/66ded0ab16cfc93a4655e788). Thanks for [Liu Tao](https://github.com/byliutao)'s efforts
+
 **(September 2024)** Training codes of CasPL+PromptSRC will be released.
 
 **(July 2024)** Our work is accepted to ECCV 2024!  
